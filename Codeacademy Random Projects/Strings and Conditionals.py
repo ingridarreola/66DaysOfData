@@ -26,6 +26,11 @@ def common_letters(string_one, string_two):
 print(common_letters("manhattan", "san francisco"))
 # returns back ['a','n']
 
+
+#------------------
+#--------------
+#---------
+# Final Review Question --- Introduction to Strings summary question
 #Introduction to Strings summary question
 
 # 1.  
@@ -47,3 +52,18 @@ def username_generator(first_name, last_name): # create variable with 2 inputs
 print(username_generator("Abe", "Simpson"))
 # returns 'AbeSimp'
 
+
+# 2.
+# Great work! Now for the temporary password, they want the function to take the input user name and shift all of the letters by one to the right, so the last letter of the username ends up as the first letter and so forth. For example, if the username is AbeSimp, then the temporary password generated should be pAbeSim.
+# Start by defining the function password_generator so that it takes one input, username and in it define an empty string named password.
+
+# Inside password_generator create a for loop that iterates through the indices username by going from 0 to len(username). To shift the letters right, at each letter the for loop should add the previous letter to the string password.
+
+def password_generator(user_name):
+    password = ""
+    for i in range(0, len(user_name)):
+        password += user_name[i-1]
+    return password
+
+print(password_generator("Isabelle"))
+# returns 'eIsabell'
